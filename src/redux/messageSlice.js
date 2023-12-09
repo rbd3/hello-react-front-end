@@ -1,19 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios'
-
+import axios from 'axios';
 
 export const fetchMessage = createAsyncThunk('fetchMessage', async () => {
-  const response = await axios.get('http://127.0.0.1:3000/messages', {headers: {
+  const response = await axios.get('http://127.0.0.1:3000/messages', {headers: { 
     Accept: 'application/json',
-  }});
-  return response.data
+  }
+});
+  return response.data;
 });
 
 const initialState = {
   value: {},
   loading: false,
-  error : '',
-}
+  error: '',
+};
 
 const messagesSlice = createSlice({
   name: 'messages',
@@ -21,7 +21,7 @@ const messagesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchMessage.fulfilled, (state, action) => ({...state, value: action.payload}));
+      .addCase(fetchMessage.fulfilled, (state, action) => ( {...state, value: action.payload} ));
   },
 });
 
