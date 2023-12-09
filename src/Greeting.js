@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Greeting = () => {
-    const messages = useSelector((state) => state.messages.value);
+  const messages = useSelector((state) => state.messages.value);
 
   return (
     <div>
