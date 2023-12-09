@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-const Greeting = () => {
+function Greeting() {
   const messages = useSelector((state) => state.messages.value);
 
   return (
@@ -10,6 +10,6 @@ const Greeting = () => {
       <h1>{messages.greeting}</h1>
     </div>
   );
-};
+}
 
 export default Greeting;

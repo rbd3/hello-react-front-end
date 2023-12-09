@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Greeting from './Greeting';
 import { fetchMessage } from './redux/messageSlice';
 
-const App = () => {
+function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,6 +17,6 @@ const App = () => {
       <Route path="/" element={<Greeting />} />
     </Routes>
   );
-};
+}
 
 export default App;

@@ -39,15 +39,6 @@
   <summary>Client</summary>
     <li><a href="https://reactjs.org/">React</a></li>
 </details>
-<details>
-  <summary>Server</summary>
-    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
-    <li><a href="https://rubyonrails.org/">Rails</a></li>
-</details>
-<details>
-  <summary>Database</summary>
-    <li><a href="https://www.postgresql.org/">Postgres</a></li>
-</details>
 
 <!-- Features -->
 
@@ -69,9 +60,8 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ```
-    ruby >= 3.2.0
-    rails >= 7.0
-    postgres >- 16
+     
+    IDE
     node
 ```
 
@@ -83,37 +73,7 @@ Clone this repository to your desired folder:
   git clone https://github.com/rbd3/hello-react-front-end.git
 ```
 
-You need to setup database for these project
 
-```
-  development = your_dataabase_dev
-  test        = your_datasebase_test
-  production  = your_datasebase_prod
-```
-
-or you can use your own database and change the ```config/database.yml```
-
-```yml
-  default: &default
-    adapter: postgresql
-    encoding: unicode
-    pool: 5
-    username: [your_username]
-    password: [your_password]
-    host: localhost
-
-  development:
-    <<: *default
-    database: [your_database_for_development]
-
-  test:
-    <<: *default
-    database: [your_database_for_test]
-
-  production:
-    <<: *default
-    database: [your_database_for_production]
-```
 
 ### Install
 
@@ -131,7 +91,7 @@ it will install the required gemfile for running the project
 to use this project:
 
 ```bash
-   rails s
+   npm start
 ```
 
 it will run the the server on ```localhost:3000```
